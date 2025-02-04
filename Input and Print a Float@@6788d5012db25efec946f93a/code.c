@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main() {
-    float Word[100];
-    scanf("%s", &Word);
-    printf("You entered: %s", Word);
+    float Word;
+    scanf("%f", &Word);
+    printf("You entered: %.2f", Word);
     return 0;
 }
