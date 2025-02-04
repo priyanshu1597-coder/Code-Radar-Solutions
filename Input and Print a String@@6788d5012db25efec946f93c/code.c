@@ -1,16 +1,8 @@
 #include <stdio.h>
-
-int main() {
-    char word[100];
-
-  
-    printf("Enter a single word: ");
-    
-
-    scanf("%s", word);
-    
-    
-    printf("You entered: %s\n", word);
-
+char* welcome(){
+    return "Welcome to Code Radar!";
+}
+int main(){
+    printf("%s", welcome());
     return 0;
 }
