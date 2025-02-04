@@ -1,13 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    char str[100];
-    
+    char word[100];
+
+  
     printf("Enter a single word: ");
+    
 
-    scanf("%s", str);
-
-    printf("You entered: %s\n", str);
+    scanf("%s", word);
+    
+    
+    printf("You entered: %s\n", word);
 
     return 0;
 }
