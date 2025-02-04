@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main(){
-    int str[100];
+    char str[100];
     printf("Enter a single word: ");
     scanf("%s" str);
     printf("You entered: %d\n", str);
