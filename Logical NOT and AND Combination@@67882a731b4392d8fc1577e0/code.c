@@ -9,7 +9,7 @@ int main() {
     if (!(num1 > 0) && !(num2 > 0)) {
         printf("");
     } else {
-        printf("At least one of the numbers is greater than zero.\n");
+        printf("");
     }
 
     return 0;
