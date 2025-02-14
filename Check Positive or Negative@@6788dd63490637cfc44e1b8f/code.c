@@ -1,4 +1,4 @@
-// Your code here...#include <stdio.h>
+#include <stdio.h>
 int main(){
     int a;
     scanf("%d", &a);
@@ -9,5 +9,5 @@ int main(){
     }else{
         printf("Zero");
     }
-    return 0;
+    return 0;
 }
