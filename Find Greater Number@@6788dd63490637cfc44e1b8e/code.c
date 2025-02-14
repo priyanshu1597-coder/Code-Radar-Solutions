@@ -1,23 +1,11 @@
-#include <stdio.h>
-
-int main() {
-    int num1, num2;
-
-    // Input two integers
-    printf("Enter the first integer: ");
-    scanf("%d", &num1);
-    
-    printf("Enter the second integer: ");
-    scanf("%d", &num2);
-
-    // Compare the two numbers and print the greater one
-    if (num1 > num2) {
-        printf("%d\n", num1);
-    } else if (num2 > num1) {
-        printf("%d\n", num2);
-    } else {
-        printf("Both numbers are equal.\n");
+#include<stdio.h>
+int main(){
+    int a,b;
+    scanf("%d %d", &a, &b);
+    if(a>b){
+        printf("%d\n", a);
+    }else{
+        printf("%d\n", b);
     }
-
     return 0;
 }
