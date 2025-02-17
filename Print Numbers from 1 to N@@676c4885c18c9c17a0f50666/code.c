@@ -1,7 +1,8 @@
 #include <stdio.h>
  int main(){
     int N;
-    printf("5:");
+    N=5;
+    printf("Enter the value of N:");
     scanf("%d" ,&N);
     for(int i = 1; i <= N; i++){
         printf("%d", i);
