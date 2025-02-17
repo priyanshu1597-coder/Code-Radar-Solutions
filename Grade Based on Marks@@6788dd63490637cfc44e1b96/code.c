@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main(){
     int a;
-    scanf("%d",a);
+    scanf("%d",&a);
     if(a>=90)
         printf("A");
     else if(a>=80)
@@ -10,7 +10,7 @@ int main(){
         printf("C");
     else if(a>=60)
         printf("D");
-    else if
+    else 
         printf("F");
     return 0;
 }
