@@ -1,11 +1,13 @@
 #include <stdio.h>
  int main(){
     int N;
-    N=5;
     printf("Enter the value of N:");
     scanf("%d" ,&N);
-    for(int i = 1; i <= N; i++){
+    int i = 1;
+    while(i <= N);
+    {
         printf("%d", i);
+         i++;
     }
     printf("\n");
     return 0;
