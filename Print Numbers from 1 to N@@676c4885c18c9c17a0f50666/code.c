@@ -6,9 +6,8 @@
     int i = 1;
     while(i <= N){
      printf("%d", i);
-         i++;
+     i++;
     }
-    
     printf("\n");
     return 0;
  }
