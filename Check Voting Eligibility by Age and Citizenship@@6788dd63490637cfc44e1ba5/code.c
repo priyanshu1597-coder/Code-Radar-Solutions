@@ -2,7 +2,7 @@
 int main(){
     int a;
     scanf("%d",&a);
-    if(a>=60){
+    if(a>=20){
         printf("Eligible");
     }else{
         printf("Not Eligible");
