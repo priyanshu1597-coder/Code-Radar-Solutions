@@ -1,9 +1,9 @@
 #include <stdio.h>
  int main(){
     int N;
-    printf("enter the value of N:");
+    printf("Enter the value of N:");
     scanf("%d" ,&N);
-    for(int i = 1; i<=N; i++){
+    for(int i = 1; i <= N; i++){
         printf("%d", i);
     }
     printf("\n");
