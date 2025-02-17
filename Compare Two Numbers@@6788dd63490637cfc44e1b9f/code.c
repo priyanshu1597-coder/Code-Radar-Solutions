@@ -1,10 +1,10 @@
 #include <stdio.h>
 int main(){
-    int a,b,c;
-    scanf("%d %d %d", &a,&b,&c);
-    if(a>=b && a>=c){
+    int a,b;
+    scanf("%d %d",a,b);
+    if(a==b){
         printf("Equal");
-    }else if(b>=a && b>=c){
+    }else if(a>b){
         printf("First");
     }else{
         printf("Second");
