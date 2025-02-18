@@ -1,13 +1,7 @@
 int main() {
     int N;
-    printf("Enter the value of N: ");
     scanf("%d", &N);
-    int i = 1;
-    while(i <= N) {
-        printf("%d ", i);
-        i++;
-    }
-
+    if(i=1,i<=N,i++);
     printf("\n");
     return 0;
 }
