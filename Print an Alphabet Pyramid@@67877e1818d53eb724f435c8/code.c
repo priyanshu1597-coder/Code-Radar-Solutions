@@ -1,20 +1,11 @@
-#include <stdio.h>
-
-void printAlphabetPyramid(int n) {
-    for (int i = 0; i < n; i++) {
-        for (char ch = 'A'; ch <= 'A' + i; ch++) {
-            printf("%c", ch);
-        }
-        printf("\n");
+// Your code here...
+#include<stdio.h>
+int main(){
+    int n;
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+        for(int j=65;j<65+i;j++){
+            printf("%c ",j);
+        }printf("\n");
     }
-}
-
-int main() {
-    int N;
-    printf("Enter number of rows: ");
-    scanf("%d", &N);
-    
-    printAlphabetPyramid(N);
-    
-    return 0;
 }
