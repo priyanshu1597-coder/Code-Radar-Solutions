@@ -1,17 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    int N, i = 1;
+    int N;
     printf("Enter a number: ");
     scanf("%d", &N);
 
-    while (i <= N) {
+    for (int i = 1; i <= N; i++) {
         printf("%d", i);
         if (i < N) {
-            printf(" ");
+            printf(" ");  
         }
-        i++;
     }
-    printf("\n");
+    printf("\n"); 
     return 0;
 }
