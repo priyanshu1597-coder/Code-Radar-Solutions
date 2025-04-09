@@ -1,11 +1,10 @@
 #include <stdio.h>
 
 int main() {
-    int num1, num2, result;
-    printf("%d%d",num1, num2);
-    scanf("%d", num1);
-    printf("%d\n",result);
-    scanf("%d", num2);
+    int a, b, result;
+    scanf("%d %d", &a, &b);
+    result = a & b;
+    printf("%d\n", result);
 
     return 0;
 }
