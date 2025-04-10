@@ -8,25 +8,21 @@ struct Student {
 };
 
 int main() {
-    int n;
+    int n, searchRoll;
     scanf("%d", &n);
 
-    struct Student students[n];
+    struct Student s[n];
 
-    // Read student data
     for (int i = 0; i < n; i++) {
-        scanf("%d %s %f", &students[i].roll, students[i].name, &students[i].marks);
+        scanf("%d %s %f", &s[i].roll, s[i].name, &s[i].marks);
     }
 
-    int searchRoll;
     scanf("%d", &searchRoll);
 
-    // Search for the student by roll number
     int found = 0;
     for (int i = 0; i < n; i++) {
-        if (students[i].roll == searchRoll) {
-            printf("Roll Number: %d, Name: %s, Marks: %.2f\n", 
-                   students[i].roll, students[i].name, students[i].marks);
+        if (s[i].roll == searchRoll) {
+            printf("Roll Number: %d, Name: %s, Marks: %.2f\n", s[i].roll, s[i].name, s[i].marks);
             found = 1;
             break;
         }
