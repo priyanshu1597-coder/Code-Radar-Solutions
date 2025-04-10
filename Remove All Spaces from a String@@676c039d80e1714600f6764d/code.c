@@ -1,22 +1,22 @@
 #include <stdio.h>
 
-void removeSpaces(char *str) {
+int main() {
+    char str[1000], result[1000];
     int i, j = 0;
+
+    // Read input string (including spaces)
+    fgets(str, sizeof(str), stdin);
+
+    // Remove spaces
     for (i = 0; str[i] != '\0'; i++) {
-        if (str[i] != ' ') {
-            str[j++] = str[i];
+        if (str[i] != ' ' && str[i] != '\n') {
+            result[j++] = str[i];
         }
     }
-    str[j] = '\0'; 
-}
+    result[j] = '\0'; // Null-terminate the result string
 
-int main() {
-    char str[100]; 
-    printf("Enter a string: ");
-    fgets(str, sizeof(str), stdin);
-     
-    removeSpaces(str);
-    printf("Output: %s", str);
+    // Output the result
+    printf("%s\n", result);
 
     return 0;
 }
