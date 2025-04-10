@@ -1,13 +1,16 @@
 #include <stdio.h>
+#include <string.h>
 
 int main() {
     char str[1000];
     int i, isBinary = 1;
 
-    // Read input string
-    scanf("%s", str);
+    // Read the whole line including spaces
+    fgets(str, sizeof(str), stdin);
 
-    // Check each character
+    // Remove trailing newline if exists
+    str[strcspn(str, "\n")] = '\0';
+
     for (i = 0; str[i] != '\0'; i++) {
         if (str[i] != '0' && str[i] != '1') {
             isBinary = 0;
