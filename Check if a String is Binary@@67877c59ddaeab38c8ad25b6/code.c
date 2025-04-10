@@ -3,21 +3,20 @@
 
 int main() {
     char str[1000];
-    int i, isBinary = 1;
+    int isBinary = 1;
 
-    // Read the whole line including spaces
-    fgets(str, sizeof(str), stdin);
+    // Read the full line (including potential spaces)
+    scanf("%s", str);  // You can also use fgets if spaces are part of input
 
-    // Remove trailing newline if exists
-    str[strcspn(str, "\n")] = '\0';
-
-    for (i = 0; str[i] != '\0'; i++) {
+    // Check each character
+    for (int i = 0; str[i] != '\0'; i++) {
         if (str[i] != '0' && str[i] != '1') {
             isBinary = 0;
             break;
         }
     }
 
+    // Output the result
     if (isBinary)
         printf("Yes\n");
     else
