@@ -1,34 +1,30 @@
 #include <stdio.h>
 #include <string.h>
 
-void removeSpaces(char str[]) {
-    int i = 0, j = 0;
-    // Loop through the string
-    while (str[i]) {
-        // If the current character is not a space, keep it
-        if (str[i] != ' ') {
+void removeSpaces(char *str) {
+    int i, j = 0;
+   
+    for(i = 0; str[i]; i++) {
+      
+        if(str[i] != ' ') {
             str[j++] = str[i];
         }
-        i++;
     }
-    // Null-terminate the modified string
+
     str[j] = '\0';
 }
 
 int main() {
     char str[100];
 
-    // Input the string
     printf("Enter a string: ");
     fgets(str, sizeof(str), stdin);
+    
+  
+    str[strcspn(str, "\n")] = 0;
 
-    // Remove the newline character that fgets may add
-    str[strcspn(str, "\n")] = '\0';
-
-    // Call the function to remove spaces
     removeSpaces(str);
 
-    // Output the modified string
     printf("Output: %s\n", str);
 
     return 0;
