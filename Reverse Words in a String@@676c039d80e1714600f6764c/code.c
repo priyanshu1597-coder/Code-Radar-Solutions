@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 void reverseWord(char *start, char *end) {
     while (start < end) {
@@ -8,6 +9,15 @@ void reverseWord(char *start, char *end) {
         *end = temp;
         start++;
         end--;
+    }
+}
+
+void capitalizeFirst(char *start, char *end) {
+    if (start <= end) {
+        *start = toupper(*start);  // Capitalize first letter
+        for (char *p = start + 1; p <= end; p++) {
+            *p = tolower(*p);      // Make rest lowercase
+        }
     }
 }
 
@@ -27,10 +37,12 @@ int main() {
     for (int i = 0; ; i++) {
         if (str[i] != ' ' && str[i] != '\0') {
             if (wordStart == NULL)
-                wordStart = &str[i];  // Start of word
+                wordStart = &str[i];  // Start of a word
         } else {
             if (wordStart != NULL) {
-                reverseWord(wordStart, &str[i - 1]);  // Reverse word
+                char *wordEnd = &str[i - 1];
+                reverseWord(wordStart, wordEnd);
+                capitalizeFirst(wordStart, wordEnd);
                 wordStart = NULL;
             }
             if (str[i] == '\0')
