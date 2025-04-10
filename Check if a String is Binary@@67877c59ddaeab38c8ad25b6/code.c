@@ -3,22 +3,21 @@
 
 int main() {
     char str[1000];
-    scanf("%s", str);  // Read input string
+    scanf("%s", str);  // Read the string
 
-    int isBinary = 1;  // Assume it's binary initially
+    int i, isBinary = 1;
 
-    for (int i = 0; str[i] != '\0'; i++) {
+    for (i = 0; str[i] != '\0'; i++) {
         if (str[i] != '0' && str[i] != '1') {
-            isBinary = 0;  // Found a non-binary character
+            isBinary = 0; // Not binary
             break;
         }
     }
 
-    if (isBinary) {
+    if (isBinary)
         printf("Yes\n");
-    } else {
+    else
         printf("No\n");
-    }
 
     return 0;
 }
