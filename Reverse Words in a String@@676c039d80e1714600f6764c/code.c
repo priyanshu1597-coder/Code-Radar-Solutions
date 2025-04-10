@@ -18,8 +18,8 @@ int main() {
     fgets(str, sizeof(str), stdin);
 
     // Remove newline character if present
-    int len = strlen(str);
-    if (str[len - 1] == '\n') {
+    size_t len = strlen(str);
+    if (len > 0 && str[len - 1] == '\n') {
         str[len - 1] = '\0';
     }
 
@@ -27,10 +27,10 @@ int main() {
     for (int i = 0; ; i++) {
         if (str[i] != ' ' && str[i] != '\0') {
             if (wordStart == NULL)
-                wordStart = &str[i];  // Mark beginning of word
+                wordStart = &str[i];  // Start of word
         } else {
             if (wordStart != NULL) {
-                reverseWord(wordStart, &str[i - 1]);  // Reverse the word
+                reverseWord(wordStart, &str[i - 1]);  // Reverse word
                 wordStart = NULL;
             }
             if (str[i] == '\0')
